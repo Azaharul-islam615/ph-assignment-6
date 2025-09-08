@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header class="bg-[#15803D] w-full">
+    <!-- Nav manu -->
+    <nav class="max-w-[1200px] mx-auto flex justify-between items-center p-4 mt-1">
+        <div>
+            <h1 class="text-[20px] sm:text-[24px] md:text-[30px] text-white font-bold">Green Earth</h1>
+        </div>
+        <div class="hidden md:block">
+            <ul class="flex gap-6 text-white font-medium text-[14px] md:text-[16px]">
+                <li><a href="index.html">About</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Plant a Tree</a></li>
+            </ul>
+        </div>
+
+        <!-- Button -->
+        <div class="hidden md:block">
+            <button
+                class="text-[#15803D] py-2 px-4 md:py-3 md:px-5 bg-[#FACC15] font-medium text-[14px] md:text-[16px] rounded-[999px]">
+                Plant a Tree
+            </button>
+        </div>
+
+        <div class="md:hidden">
+            <button class="text-white text-2xl">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="w-full h-auto bg-[#CFF0DC]">
+        <div class="flex justify-between items-center">
+
+            <div>
+                <img class="h-[150px] sm:h-[220px] md:h-[300px] lg:h-[383px]" src="./assets/hero-leaf1.png" alt="">
+            </div>
+
+            <div class="text-center px-2 w-[90%] sm:w-[70%] md:w-[600px] lg:w-[770px]">
+                <h1 class="font-bold text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] text-[#1F2937]">
+                    Plant a Tree, Grow a Future
+                </h1>
+                <p
+                    class="font-[400] text-[12px] sm:text-[14px] md:text-[14px] lg:text-[14px] text-[#1f2937cd] mb-[15px] md:mb-[20px]">
+                    Join our mission to plant 1 million trees and make the Earth greener for future generations.
+                </p>
+                <button
+                    class="text-[#15803D] py-2 px-4 sm:py-3 sm:px-6 bg-[#FACC15] font-medium text-[14px] sm:text-[16px] rounded-[999px]">
+                    Get Involved
+                </button>
+            </div>
+
+            <div>
+                <img class="h-[150px] sm:h-[220px] md:h-[300px] lg:h-[383px]" src="./assets/hero-leaf2.png" alt="">
+            </div>
+        </div>
+    </section>
+</header>
+
+   
+</body>
+</html>
