@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- tailwind and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -17,63 +22,133 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-<header class="bg-[#15803D] w-full">
-    <!-- Nav manu -->
-    <nav class="max-w-[1200px] mx-auto flex justify-between items-center p-4 mt-1">
-        <div>
-            <h1 class="text-[20px] sm:text-[24px] md:text-[30px] text-white font-bold">Green Earth</h1>
-        </div>
-        <div class="hidden md:block">
-            <ul class="flex gap-6 text-white font-medium text-[14px] md:text-[16px]">
-                <li><a href="index.html">About</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Plant a Tree</a></li>
-            </ul>
-        </div>
-
-        <!-- Button -->
-        <div class="hidden md:block">
-            <button
-                class="text-[#15803D] py-2 px-4 md:py-3 md:px-5 bg-[#FACC15] font-medium text-[14px] md:text-[16px] rounded-[999px]">
-                Plant a Tree
-            </button>
-        </div>
-
-        <div class="md:hidden">
-            <button class="text-white text-2xl">☰</button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="w-full h-auto bg-[#CFF0DC]">
-        <div class="flex justify-between items-center">
-
+    <header class="bg-[#15803D] w-full">
+        <!-- Nav manu -->
+        <nav class="max-w-[1200px] mx-auto flex justify-between items-center p-4 mt-1">
             <div>
-                <img class="h-[150px] sm:h-[220px] md:h-[300px] lg:h-[383px]" src="./assets/hero-leaf1.png" alt="">
+                <h1 class="text-[20px] sm:text-[24px] md:text-[30px] text-white font-bold">Green Earth</h1>
+            </div>
+            <div class="hidden md:block">
+                <ul class="flex gap-6 text-white font-medium text-[14px] md:text-[16px]">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="">Plant a Tree</a></li>
+                </ul>
             </div>
 
-            <div class="text-center px-2 w-[90%] sm:w-[70%] md:w-[600px] lg:w-[770px]">
-                <h1 class="font-bold text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] text-[#1F2937]">
-                    Plant a Tree, Grow a Future
-                </h1>
-                <p
-                    class="font-[400] text-[12px] sm:text-[14px] md:text-[14px] lg:text-[14px] text-[#1f2937cd] mb-[15px] md:mb-[20px]">
-                    Join our mission to plant 1 million trees and make the Earth greener for future generations.
-                </p>
+            <div class="hidden md:block">
                 <button
-                    class="text-[#15803D] py-2 px-4 sm:py-3 sm:px-6 bg-[#FACC15] font-medium text-[14px] sm:text-[16px] rounded-[999px]">
-                    Get Involved
+                    class="text-[#15803D] py-2 px-4 md:py-3 md:px-5 bg-[#FACC15] font-medium text-[14px] md:text-[16px] rounded-[999px]">
+                    Plant a Tree
                 </button>
             </div>
 
-            <div>
-                <img class="h-[150px] sm:h-[220px] md:h-[300px] lg:h-[383px]" src="./assets/hero-leaf2.png" alt="">
+            <div class="md:hidden">
+                <button class="text-white text-2xl">☰</button>
             </div>
-        </div>
-    </section>
-</header>
+        </nav>
 
-   
+        <!-- Hero Section -->
+        <section class="w-full h-auto bg-[#CFF0DC]">
+            <div class="flex justify-between items-center">
+
+                <div>
+                    <img class="h-[150px] sm:h-[220px] md:h-[300px] lg:h-[383px]" src="./assets/hero-leaf1.png" alt="">
+                </div>
+
+                <div class="text-center px-2 w-[90%] sm:w-[70%] md:w-[600px] lg:w-[770px]">
+                    <h1 class="font-bold text-[20px] sm:text-[28px] md:text-[34px] lg:text-[40px] text-[#1F2937]">
+                        Plant a Tree, Grow a Future
+                    </h1>
+                    <p
+                        class="font-[400] text-[12px] sm:text-[14px] md:text-[14px] lg:text-[14px] text-[#1f2937cd] mb-[15px] md:mb-[20px]">
+                        Join our mission to plant 1 million trees and make the Earth greener for future generations.
+                    </p>
+                    <button
+                        class="text-[#15803D] py-2 px-4 sm:py-3 sm:px-6 bg-[#FACC15] font-medium text-[14px] sm:text-[16px] rounded-[999px]">
+                        Get Involved
+                    </button>
+                </div>
+
+                <div>
+                    <img class="h-[150px] sm:h-[220px] md:h-[300px] lg:h-[383px]" src="./assets/hero-leaf2.png" alt="">
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- main section -->
+    <main class="bg-[#cff0dc84] ">
+        <section class="pt-[80px]">
+            <h1 class="text-center font-semibold text-[32px] text-[#1F2937] mb-[40px]">Choose Your Trees</h1>
+            <section class="max-w-[1200px] mx-auto w-12/12 grid lg:grid-cols-12 lg:gap-3 ">
+                <!-- category,cart, -->
+                <section class="col-span-12 text-center lg:text-left  lg:col-span-2 ">
+                    <!-- category section -->
+                    <h1 class="mb-[14px] text-[#000000] text-[20px] font-semibold">Categories</h1>
+                    <div id="Categoriesitem">
+
+                    </div>
+                </section>
+                <!-- cart section -->
+                <section class=" mt-7  flex justify-center items-center col-span-12 lg:mt-0  lg:col-span-8">
+                    <div id="card-container" class="  grid grid-cols-1 lg:grid-cols-3 lg:gap-3 space-y-3 lg:space-y-1">
+
+                    
+                     </div>
+                    </section>
+
+                <section class="border-1 col-span-2 bg-white">
+                    <h1>extra details</h1>
+                </section>
+            </section>
+        </section>
+
+     <!-- campaign section -->
+        <section class="max-w-[780px] mx-auto  bg-white mt-[60px]">
+            <h1 class="text-center font-semibold text-[32px] ">About the Campaign</h1>
+            <div class="flex justify-between items-center gap-5 pt-[40px] pb-[70px]">
+                <div class="w-[50%]">
+                    <img class="rounded-xl" src="./assets/about.png" alt="">
+                </div>
+                <div class="w-[50%] font-[400] text-[16px] text-[#1F2937] ">
+                    <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start,
+                        we’ve planted
+                        over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for
+                        wildlife, and
+                        combat global warming.</p>
+                    <ul class="uli pl-[30px]">
+                        <li>Restoration of natural habitats</li>
+                        <li>Improvement of air quality</li>
+                        <li>Support for local communities</li>
+                    </ul>
+        
+                </div>
+            </div>
+        </section>
+
+        <!-- our impact section -->
+         <section class="bg-[#CFF0DC]">
+            <h1 class="text-center">Our Impact</h1>
+            <div class="flex justify-center items-center"> 
+                <div class="bg-white">
+                    <h1>500K+</h1>
+                    <p>Trees Planted</p>
+                </div>
+                <div>
+                    <h1>120+</h1>
+                    <p>Communities Involved</p>
+                </div>
+                <div>
+                    <h1>30+</h1>
+                    <p>Countries Reached</p>
+                </div>
+            </div>
+         </section>
+     
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>

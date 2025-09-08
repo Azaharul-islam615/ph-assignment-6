@@ -4,5 +4,17 @@
 .list li{
     list-style: none;
 }
+.descrip{
+    transition: 0.3s;
+}
+.uli li{
+    list-style-type: disc;
+}
+
+
+
+
+
+
 
 
