@@ -1,3 +1,15 @@
+const manageSpinner=(status)=>{
+    if(status==true){
+        document.getElementById("Spinner").classList.remove("hidden")
+       
+    }
+    else{
+        document.getElementById("Spinner").classList.add("hidden")
+    }
+}
+
+
+
 // categories part
 const categories=()=>{
     fetch('https://openapi.programming-hero.com/api/categories')
@@ -44,21 +56,28 @@ const categoriesItem=(items)=>{
 categories()
 
 const loadtreebycategory=(treeid)=>{
+    manageSpinner(true)
     fetch(`https://openapi.programming-hero.com/api/category/${treeid}`)
     .then(res=>res.json())
     .then(data=>{
         getplants(data.plants)
+        manageSpinner(false)
       
     })
+   
 }
 
 
 
 // card section
 const allplants = () => {
+    manageSpinner(true)
     fetch('https://openapi.programming-hero.com/api/plants')
         .then(res => res.json())
-        .then(data => getplants(data.plants));
+        .then(data =>{
+             getplants(data.plants)
+             manageSpinner(false)
+});
 }
 
 
@@ -103,7 +122,7 @@ const getplants = (plants) => {
             `;
             addtoclick.appendChild(cartItemDiv);
 
-            
+             
             Totalprice(plant.price);
 
           
@@ -135,11 +154,13 @@ const Totalprice = (value) => {
 
 allplants();
 const loadtreeDetail=(id)=>{
+    manageSpinner(true)
    fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
    .then(res=>res.json())
    .then(data=>{
     
     dispalytreedetails(data.plants)
+    manageSpinner(false)
    })
 }
 const dispalytreedetails=(plantsdets)=>{
@@ -169,10 +190,8 @@ dialog.innerHTML = `
     </div>
     </div>
 `;
-
 body.appendChild(dialog);
-
-// Modal দেখানোর জন্য
 dialog.showModal();
 
 }
+
