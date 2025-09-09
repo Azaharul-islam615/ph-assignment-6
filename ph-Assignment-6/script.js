@@ -48,7 +48,7 @@ const loadtreebycategory=(treeid)=>{
     .then(res=>res.json())
     .then(data=>{
         getplants(data.plants)
-      console.log(data.plants)
+      
     })
 }
 
@@ -69,12 +69,12 @@ const getplants = (plants) => {
     
     plants.forEach(plant => {
         // Main plant card
-        console.log(plant.image)
+        
         const cardDiv = document.createElement('div');
         cardDiv.innerHTML = `
             <div class="card w-[250px] pt-3 pl-3 pr-3 bg-white h-[350px] rounded-lg">
                 <div><img class="h-[160px] w-[224px] rounded-lg mb-2" src="${plant.image}" alt=""></div>
-                <h1 class="font-semibold text-[14px] text-[#1F2937]">${plant.name}</h1>
+                <h1 onclick="loadtreeDetail(${plant.id})" class="font-semibold text-[14px] text-[#1F2937]">${plant.name}</h1>
                 <p class="font-[400] text-[9px] text-[#1F2937] mb-2">${plant.description}</p>
                 <div class="flex justify-between mb-3">
                     <h3 class="pt-[4px] pb-[4px] pl-3 pr-3 bg-[#DCFCE7] rounded-[400px] font-medium text-[14px] text-[#15803D]">${plant.category}</h3>
@@ -134,3 +134,45 @@ const Totalprice = (value) => {
 
 
 allplants();
+const loadtreeDetail=(id)=>{
+   fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
+   .then(res=>res.json())
+   .then(data=>{
+    
+    dispalytreedetails(data.plants)
+   })
+}
+const dispalytreedetails=(plantsdets)=>{
+    console.log(plantsdets)
+const body = document.querySelector("body");
+
+const dialog = document.createElement("dialog");
+dialog.id = "my_modal_5";
+dialog.className = "modal modal-bottom sm:modal-middle";
+
+dialog.innerHTML = `
+<div>
+    <div class="modal-box flex justify-center items-center">
+        <div class=" card w-[250px] pt-3 pl-3 pr-3 bg-gray-400 h-[350px] rounded-lg">
+                <div><img class="h-[160px] w-[224px] rounded-lg mb-2" src="${plantsdets.image}" alt=""></div>
+                <h1  class="font-semibold text-[14px] text-white">Category:${plantsdets.category}</h1>
+                <h1 class="font-semibold text-[14px] text-white"><i class="fa-solid fa-bangladeshi-taka-sign"></i>Price:${plantsdets.price}</h1>
+                <p class="font-[400] text-[9px] text-white mb-2"><span class='font-semibold text-[16px]'>description:</span>${plantsdets.description}</p>
+
+                
+            </div>
+        <div class="modal-action">
+            <form method="dialog">
+                <button class="btn block">Close</button>
+            </form>
+        </div>
+    </div>
+    </div>
+`;
+
+body.appendChild(dialog);
+
+// Modal দেখানোর জন্য
+dialog.showModal();
+
+}
