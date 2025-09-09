@@ -82,7 +82,7 @@
     <main class="bg-[#cff0dc84] ">
         <section class="pt-[80px]">
             <h1 class="text-center font-semibold text-[32px] text-[#1F2937] mb-[40px]">Choose Your Trees</h1>
-            <section class="max-w-[1200px] mx-auto w-12/12 grid lg:grid-cols-12 lg:gap-3 ">
+            <section class="max-w-[1200px] mx-auto w-full grid lg:grid-cols-12 lg:gap-2 ">
                 <!-- category,cart, -->
                 <section class="col-span-12 text-center lg:text-left  lg:col-span-2 ">
                     <!-- category section -->
@@ -92,15 +92,23 @@
                     </div>
                 </section>
                 <!-- cart section -->
-                <section class=" mt-7  flex justify-center items-center col-span-12 lg:mt-0  lg:col-span-8">
+                <section class="  mt-7  flex justify-center items-center col-span-12 lg:mt-0  lg:col-span-8">
                     <div id="card-container" class="  grid grid-cols-1 lg:grid-cols-3 lg:gap-3 space-y-3 lg:space-y-1">
 
                     
                      </div>
                     </section>
+<!-- add car detail on click add to cart -->
+                <section id="addToclick" class="col-span-12 p-4 mt-3 mb-3 lg:p-0 lg:col-span-2 bg-white rounded-xl lg:mt-0 ">
+                    <h1 class="font-semibold text-[20px] mt-3 ml-2">Your Cart</h1>
 
-                <section class="border-1 col-span-2 bg-white">
-                    <h1>extra details</h1>
+                    <div id="cartvar">
+
+                    </div>
+                        <div class="flex justify-between items-center m-2 font-medium text-[16px]">
+                            <h1>Total:</h1>
+                            <p>৳<span id="totalprice">0</span></p>
+                        </div>
                 </section>
             </section>
         </section>
@@ -108,17 +116,17 @@
      <!-- campaign section -->
         <section class="max-w-[780px] mx-auto  bg-white mt-[60px]">
             <h1 class="text-center font-semibold text-[32px] ">About the Campaign</h1>
-            <div class="flex justify-between items-center gap-5 pt-[40px] pb-[70px]">
-                <div class="w-[50%]">
+            <div class=" text-center lg:flex justify-between items-center lg:gap-5 pt-[40px] pb-[70px]">
+                <div class=" mb-4 lg:w-[50%]">
                     <img class="rounded-xl" src="./assets/about.png" alt="">
                 </div>
-                <div class="w-[50%] font-[400] text-[16px] text-[#1F2937] ">
+                <div class=" text-left lg:w-[50%] font-[400] text-[16px] text-[#1F2937] ">
                     <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start,
                         we’ve planted
                         over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for
                         wildlife, and
                         combat global warming.</p>
-                    <ul class="uli pl-[30px]">
+                    <ul class="uli text-left pl-[20px] lg:pl-[30px]">
                         <li>Restoration of natural habitats</li>
                         <li>Improvement of air quality</li>
                         <li>Support for local communities</li>
@@ -129,25 +137,54 @@
         </section>
 
         <!-- our impact section -->
-         <section class="bg-[#CFF0DC]">
-            <h1 class="text-center">Our Impact</h1>
-            <div class="flex justify-center items-center"> 
-                <div class="bg-white">
-                    <h1>500K+</h1>
-                    <p>Trees Planted</p>
+         <section class="bg-[#CFF0DC] lg:h-[250px] pt-[50px] pb-[50px] pl-[100px] lg:pr-[80px]">
+            
+                <h1 class=" ml-5 lg:text-center font-semibold text-[32px] ">Our Impact</h1>
+           
+            <div class="lg:flex lg:justify-evenly lg:items-center mt-[20px]"> 
+                <div class="bg-white mb-5 w-[220px] text-center pt-3 pb-3 pl-5 pr-5 rounded-xl">
+                    <h1 class="font-semibold text-[32px] text-[#15803D]">500K+</h1>
+                    <p class="font-[400] text-[16px]">Trees Planted</p>
                 </div>
-                <div>
-                    <h1>120+</h1>
-                    <p>Communities Involved</p>
+                <div class="bg-white mb-5 w-[220px] text-center pt-3 pb-3 pl-5 pr-5 rounded-xl">
+                    <h1 class="font-semibold text-[32px] text-[#15803D]">120+</h1>
+                    <p class="font-[400] text-[16px]">Communities Involved</p>
                 </div>
-                <div>
-                    <h1>30+</h1>
-                    <p>Countries Reached</p>
+                <div class="bg-white  w-[220px] text-center pt-3 pb-3 pl-5 pr-5 rounded-xl">
+                    <h1 class="font-semibold text-[32px] text-[#15803D]">30+</h1>
+                    <p class="font-[400] text-[16px]">Countries Reached</p>
                 </div>
             </div>
          </section>
-     
+<!-- plant tree today section -->
+         <section class="bg-[#166534] h-[400px] flex justify-center items-center">
+            <div >
+                <h1 class="text-white text-center font-semibold text-[26px] mb-[30px]">Plant a Tree Today</h1>
+                <div class="login p-[30px] bg-[#15803D] rounded-xl font-[400] text-[14px]">
+                    
+                    <div class="w-[300px]">
+                        <input class="bg-white w-[100%] p-[5px] mb-2 outline-none border-none rounded-md" type="text"
+                            placeholder="Your Name" name="" id="">
+                        <input class="bg-white w-[100%] p-[5px] mb-2 outline-none border-none rounded-md" type="email"
+                            placeholder="Enter your email address" name="" id="">
+                        <select class="bg-white w-[100%] p-[5px] mb-2 outline-none border-none rounded-md">
+                            <option class="font-[400]" value="">Number of Trees</option>
+                            <option value="1">Tree One</option>
+                            <option value="2">Tree Two</option>
+                            <option value="3">Tree Three</option>
+                        </select><br>
+                        <button class="w-[100%] bg-[#FACC15] text-[#15803D] p-1 rounded-md">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+     <footer class="bg-[#14532D] text-white flex justify-center items-center p-6">
+        <p class="font-[400] text-[16px]">© 2025 Green Earth. All Rights Reserved.</p>
+
+     </footer>
     </main>
+
     <script src="script.js"></script>
 </body>
 

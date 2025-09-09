@@ -10,6 +10,9 @@
 .uli li{
     list-style-type: disc;
 }
+.login{
+    box-shadow: 0 4px 22px 0 #00000022;
+}
 
 
 
